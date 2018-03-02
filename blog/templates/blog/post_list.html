@@ -4,18 +4,17 @@
     <title>ARVGames</title>
   </head>
   <body>
-    <div>
-        <h1><a href="">AVG blog</a></h1>
-    </div>
-    <div>
-        <p>published: 02.02.2018, 12:14</p>
-        <h2><a href="">ARVGames on production visit us on 6 months</a></h2>
-        <p></p>
-    </div>
-    <div>
-        <p>published: 2.02.2018, 12:14</p>
-        <h2><a href="">My first post</a></h2>
-        <p>japod ----> el pequeño manquito</p>
-    </div>
+  	<div>
+  		<h1>
+  			<a href="">ARVGames</a>
+  		</h1>
+  	</div>
+		 {% for post in posts %}
+        <div>
+            <h3><a href="">{{ post.title }}</a></h3>
+            <p>{{ post.text|linebreaksbr }}</p>
+            <p>published: {{ post.published_date }}</p>
+        </div>
+    {% endfor %}
   </body>
-</html>
+</html>	
